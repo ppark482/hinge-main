@@ -1,5 +1,11 @@
 var 	gulp = require('gulp'),
-			serve = require('gulp-webserver'),
+			webserver = require('gulp-webserver'),
+			serve = webserver({
+				livereload: true,
+				directoryListing: true,
+				open: true,
+				port: 8080
+			}),
 			connect = require('gulp-connect'),
 			sass = require('gulp-sass'),
 			concat = require('gulp-concat'),
@@ -11,19 +17,22 @@ gulp.task('sass', function () {
   gulp.src('./assets/css/main.scss')
     .pipe(sass().on('error', sass.logError))
 		.pipe(concat('main.css'))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+		.pipe( serve());
 });
 
 gulp.task('js', function() {
   return gulp.src('./assets/*.js')
     .pipe( concat('main.js'))
     .pipe( uglify() )
-    .pipe( gulp.dest('./dist/'));
+    .pipe( gulp.dest('./dist/'))
+		.pipe( serve());
 });
 
 gulp.task('html', function() {
   return gulp.src(['./index.html'])
-    .pipe( gulp.dest('./dist/'));
+    .pipe( gulp.dest('./dist/'))
+		.pipe( serve());
 });
 
 gulp.task('serve', function(){
