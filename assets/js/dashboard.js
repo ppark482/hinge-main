@@ -32,7 +32,6 @@
 		var dashItem = $('#dashboard > li');
 		dashItem.each( function () {
 			var self = $(this);
-			console.log(self);
 
 			// Begin custom events
 
