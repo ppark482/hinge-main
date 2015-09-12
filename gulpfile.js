@@ -4,10 +4,10 @@ var 	gulp = require('gulp'),
 			concat = require('gulp-concat'),
 			uglify = require('gulp-uglify');
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'connect', 'watch']);
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
 
 gulp.task('sass', function () {
-  gulp.src('./assets/css/sass/main.scss')
+  return gulp.src('./assets/css/sass/main.scss')
     .pipe(sass().on('error', sass.logError))
 		.pipe(concat('main.css'))
     .pipe(gulp.dest('./dist'))
@@ -15,7 +15,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('vendor-css', function () {
-  gulp.src('./assets/css/*.css')
+  return gulp.src('./assets/css/*.css')
 		.pipe(concat('vendor.css'))
     .pipe(gulp.dest('./dist'))
 		.pipe(connect.reload());
@@ -37,6 +37,12 @@ gulp.task('vendor-js', function() {
 		.pipe(connect.reload());
 });
 
+gulp.task('images', function(){
+	return gulp.src(['./assets/img/*.jpg', './assets/img/*.png', './assets/img/*.svg'])
+    .pipe( gulp.dest('./dist/img/'))
+		.pipe(connect.reload());
+});
+
 
 gulp.task('html', function() {
   return gulp.src(['./index.html'])
@@ -45,7 +51,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('connect', function(){
-	connect.server({
+	return connect.server({
 		root: 'dist',
 		livereload: true
 	});
