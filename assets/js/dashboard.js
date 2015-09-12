@@ -3,6 +3,11 @@
 	$('#top').append('<ul id="dashboard"></ul>');
 	var dashboardItems = [
 		{
+			'title' 	: 'Home',
+			'tag'		: 'intro',
+			'option' 	: ''
+		},
+		{
 			'title' 	: 'About',
 			'tag'		: 'about',
 			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.'
@@ -35,6 +40,13 @@
 
 			// Begin custom events
 
+			// Intro
+			if ( self[0].dataset.tag === 'intro' ) {
+				self.on('click', function () {
+						$('.content-container').html('<img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png">');
+				});
+			}
+
 			// About Us
 			if ( self[0].dataset.tag === 'about' ) {
 				self.on('click', function () {
@@ -43,7 +55,7 @@
 						$('#about-message').remove();
 						return;
 					} else {
-						$('#hero-logo').parent().prepend('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
+						$('.content-container').html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
 					}
 				});
 			}
@@ -58,7 +70,7 @@
 						return;
 					} else {
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							$('#hero-logo').parent().prepend('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
+							$('.content-container').html('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
 					}
 				});

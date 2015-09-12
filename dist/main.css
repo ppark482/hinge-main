@@ -61,6 +61,9 @@
   position: absolute;
   animation-duration: 3s; }
 
+.portfolio-items {
+  width: 100%; }
+
 body {
   background-color: #1c1c1c;
   font-family: "Lato";
@@ -68,6 +71,7 @@ body {
   font-size: 16px;
   color: #dcddc2;
   height: 100vh;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch; }
 
