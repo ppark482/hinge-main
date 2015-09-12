@@ -33,9 +33,10 @@
 
 			if ( self[0].dataset.tag === 'about' ) {
 				self.on('click', function () {
-					$('#hero-logo').parent().prepend('<div id="about-message" style="color: white">' + self[0].dataset.option + '</div>');
+					$('#hero-logo').parent().prepend('<div class="animated fadeIn" id="about-message" style="color: white">' + self[0].dataset.option + '</div>');
+					$('#hero-logo').css("padding-top", "72px");
 				});
-			} 
+			}
 		});
 	}
 
