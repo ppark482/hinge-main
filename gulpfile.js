@@ -31,14 +31,14 @@ gulp.task('js', function() {
 
 gulp.task('vendor-js', function() {
   return gulp.src('./assets/js/vendor/*.js')
-    .pipe( concat('vendor.js'))
+    // .pipe( concat('vendor.js'))
     .pipe( uglify() )
-    .pipe( gulp.dest('./dist/'))
+    .pipe( gulp.dest('./dist/vendor-js/'))
 		.pipe(connect.reload());
 });
 
 gulp.task('images', function(){
-	return gulp.src(['./assets/img/*.jpg', './assets/img/*.png', './assets/img/*.svg'])
+	return gulp.src(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'])
     .pipe( gulp.dest('./dist/img/'))
 		.pipe(connect.reload());
 });

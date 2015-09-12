@@ -59,7 +59,7 @@
 						return;
 					} else {
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							$('#hero-logo').parent().prepend('<img class="portfolio-items" src="assets/img/portfolio/' + portfolioImgs[i] + '">');
+							$('#hero-logo').parent().prepend('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
 					}
 				});
