@@ -35,6 +35,7 @@
 
 	function customEvents () {
 		var dashItem = $('#dashboard > li');
+		var $container = $('.content-container');
 		dashItem.each( function () {
 			var self = $(this);
 
@@ -43,7 +44,7 @@
 			// Intro
 			if ( self[0].dataset.tag === 'intro' ) {
 				self.on('click', function () {
-						$('.content-container').html('<img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png">');
+					$container.html('<img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png">');
 				});
 			}
 
@@ -55,7 +56,7 @@
 						$('#about-message').remove();
 						return;
 					} else {
-						$('.content-container').html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
+						$container.html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
 					}
 				});
 			}
@@ -69,8 +70,9 @@
 							});
 						return;
 					} else {
+						$container.empty()
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							$('.content-container').html('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
+							$container.append('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
 					}
 				});
