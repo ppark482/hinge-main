@@ -5,7 +5,7 @@
 		{
 			'title' 	: 'About Us',
 			'tag'		: 'about',
-			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast developement.'
+			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.'
 		},
 		{
 			'title' 	: 'Our Work',
@@ -39,11 +39,12 @@
 			// About Us
 			if ( self[0].dataset.tag === 'about' ) {
 				self.on('click', function () {
+
 					if ($('#about-message').length) {
 						$('#about-message').remove();
 						return;
 					} else {
-						$('#hero-logo').parent().prepend('<div id="about-message">' + self[0].dataset.option + '</div>');
+						$('#hero-logo').parent().prepend('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
 					}
 				});
 			}
