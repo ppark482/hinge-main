@@ -35,6 +35,12 @@ gulp.task('html', function() {
 		.pipe( serve());
 });
 
+gulp.task('sass', function () {
+  gulp.src('./assets/css/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./assets/css/'));
+});
+
 gulp.task('serve', function(){
 	serve({
 		livereload: true,
