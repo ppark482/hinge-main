@@ -67,7 +67,7 @@
 			// Contact Us
 			if ( self[0].dataset.tag === 'contact' ) {
 				self.on('click', function () {
-
+					self.append('<div id="contact-us">' + self[0].dataset.option + '</div>');
 				});
 			}
 		});

@@ -1,6 +1,6 @@
 /* ----- Colors ----- */
 #headerwrap {
-  margin-top: 110px;
+  margin-top: -10px;
   padding-top: 120px;
   text-align: center;
   background-attachment: relative;
@@ -17,16 +17,6 @@
   -o-background-size: cover;
   background-size: cover; }
 
-    #inc{
-      width: 10%;
-      float: right;
-      position: absolute;
-      right: -53px;
-      bottom: 4px;
-      animation-duration: 3s;
-      animation-delay: 2s;
-
-    }
 #headerwrap h1 {
   font-weight: 700;
   font-size: 70px;
@@ -57,6 +47,8 @@
       background-color: #dcddc2;
       border: 1px solid #d01500;
       color: #d01500; }
+  #dashboard #about-message {
+    color: #dcddc2; }
 
 body {
   background-color: #1c1c1c;
