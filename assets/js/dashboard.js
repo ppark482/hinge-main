@@ -72,7 +72,7 @@
 					} else {
 						$container.empty()
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							$container.append('<img class="portfolio-items" src="img/portfolio/' + portfolioImgs[i] + '">');
+							$container.append('<img class="portfolio-items animated fadeIn" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
 					}
 				});
