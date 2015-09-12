@@ -1,0 +1,37 @@
+#headerwrap {
+	// background: url(../img/header-bg.jpg) no-repeat center top;
+	margin-top: -10px;
+	padding-top:120px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 700px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	font-weight: 700;
+	font-size: 70px;
+	color: #494848;
+	margin-bottom: 20px;
+}
+
+#headerwrap h4 {
+	color: #494848;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+#hero-logo {
+	width: 1000px;
+}
