@@ -3,7 +3,7 @@
 	$('#top').append('<ul id="dashboard"></ul>');
 	var dashboardItems = [
 		{
-			'title' 	: 'About Us',
+			'title' 	: 'About',
 			'tag'		: 'about',
 			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.'
 		},
