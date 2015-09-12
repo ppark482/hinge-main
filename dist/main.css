@@ -62,7 +62,8 @@
   animation-duration: 3s; }
 
 .portfolio-items {
-  width: 100%; }
+  width: 30%;
+  margin: 1%; }
 
 body {
   background-color: #1c1c1c;
@@ -74,6 +75,11 @@ body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch; }
+
+.wrapper {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto; }
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
