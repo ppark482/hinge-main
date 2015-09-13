@@ -1,0 +1,9 @@
+.container {
+	flex: 1 1 auto;
+
+	&__content {
+		position: relative;
+		width: 90%;
+		margin: 0 auto;
+	}
+}

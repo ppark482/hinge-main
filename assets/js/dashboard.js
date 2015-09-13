@@ -1,6 +1,6 @@
 (function ($) {
 
-	$('#top').append('<ul id="dashboard"></ul>');
+	$('.navigation').append('<ul id="dashboard"></ul>');
 	var dashboardItems = [
 		{
 			'title' 	: 'Home',
@@ -35,7 +35,7 @@
 
 	function customEvents () {
 		var dashItem = $('#dashboard > li');
-		var $container = $('.content-container');
+		var $container = $('.container__content');
 		dashItem.each( function () {
 			var self = $(this);
 
