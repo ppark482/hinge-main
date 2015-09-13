@@ -22,7 +22,8 @@ body {
 	flex-flow: row nowrap;
 }
 
-/* Titles */
+/* Standards */
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
     font-weight: 300;
@@ -35,15 +36,8 @@ ul, li {
 	margin: 0;
 	padding: 0;
 }
-#inc {
-  width: 10%;
-  float: right;
-  position: absolute;
-  right: -53px;
-  bottom: 4px;
-  animation-duration: 3s;
-  animation-delay: 2s;
-}
-#hero-logo {
-	padding-top: 120px;
+
+img {
+	display: block;
+	max-width: 100%;
 }

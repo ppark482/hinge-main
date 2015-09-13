@@ -24,7 +24,7 @@
 		}
 	];
 
-	var portfolioImgs = ['folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png'];
+	var portfolioImgs = ['folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png', 'folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png'];
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
@@ -35,7 +35,7 @@
 
 	function customEvents () {
 		var dashItem = $('#dashboard > li');
-		var $container = $('.container__content');
+		var $container = $('.container');
 		dashItem.each( function () {
 			var self = $(this);
 
@@ -44,7 +44,7 @@
 			// Intro
 			if ( self[0].dataset.tag === 'intro' ) {
 				self.on('click', function () {
-					$container.html('<img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png">');
+					$container.html('<section class="hero"><img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png"></section>');
 				});
 			}
 
@@ -71,9 +71,11 @@
 						return;
 					} else {
 						$container.empty()
+						var images = [];
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							$container.append('<img class="portfolio-items animated fadeIn" src="img/portfolio/' + portfolioImgs[i] + '">');
+							images.push('<img class="portfolio-items animated fadeIn" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
+						$container.html('<section class="portfolio">' + images.join('') + '</section>')
 					}
 				});
 			}
