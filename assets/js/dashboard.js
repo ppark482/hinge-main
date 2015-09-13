@@ -96,7 +96,8 @@
 
 		$items.each( function(item){
 			$(this).on('click', function(){
-				$(this).addClass('expanded');
+				$items.addClass('hidden');
+				$(this).removeClass('hidden').addClass('expanded');
 			});
 		});
 	}
