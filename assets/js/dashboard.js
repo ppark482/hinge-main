@@ -26,6 +26,8 @@
 
 	var portfolioImgs = ['folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png', 'folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png'];
 
+	var $container = $('.container');
+
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
 			$('#dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].title + '</li>');
@@ -35,7 +37,6 @@
 
 	function customEvents () {
 		var dashItem = $('#dashboard > li');
-		var $container = $('.container');
 		dashItem.each( function () {
 			var self = $(this);
 
@@ -44,7 +45,7 @@
 			// Intro
 			if ( self[0].dataset.tag === 'intro' ) {
 				self.on('click', function () {
-					$container.html('<section class="hero"><img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png"></section>');
+					$container.html('<section class="hero animated fadeIn"><img id="hero-logo" src="img/logo.png"><img id="inc" class="animated" src="img/hinge_inc.png"></section>');
 				});
 			}
 
@@ -75,7 +76,8 @@
 						for ( var i = 0; i < portfolioImgs.length; i++ ) {
 							images.push('<img class="portfolio-items animated fadeIn" src="img/portfolio/' + portfolioImgs[i] + '">');
 						}
-						$container.html('<section class="portfolio">' + images.join('') + '</section>')
+						$container.html('<section class="portfolio">' + images.join('') + '</section>');
+						projectEvents();
 					}
 				});
 			}
@@ -83,9 +85,19 @@
 			// Contact Us
 			if ( self[0].dataset.tag === 'contact' ) {
 				self.on('click', function () {
-					self.append('<div id="contact-us">' + self[0].dataset.option + '</div>');
+					$container.html('<div id="contact-us" class="animated fadeIn">' + self[0].dataset.option + '</div>');
 				});
 			}
+		});
+	}
+
+	function projectEvents () {
+		var $items = $('.portfolio-items');
+
+		$items.each( function(item){
+			$(this).on('click', function(){
+				$(this).addClass('expanded');
+			});
 		});
 	}
 

@@ -1,4 +1,4 @@
-$nav-block: calc(100vh/4);
+$nav-block: calc((100vh/4) - 5px);
 
 .navigation {
 	flex: 0 0 $nav-block;
@@ -6,14 +6,14 @@ $nav-block: calc(100vh/4);
 
 #dashboard {
 
-	> li {
+	li {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: $purple;
 		width: 100%;
 		height: $nav-block;
-		margin: 5px;
+		margin-top: 5px;
 
 		&:hover {
 			cursor: pointer;
