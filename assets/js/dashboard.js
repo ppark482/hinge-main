@@ -1,6 +1,5 @@
 (function ($) {
 
-	$('.navigation').append('<ul id="dashboard"></ul>');
 	var dashboardItems = [
 		{
 			'title' 	: 'Home',
@@ -30,13 +29,13 @@
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
-			$('#dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].title + '</li>');
+			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].title + '</li>');
 		}
 		customEvents();
 	}
 
 	function customEvents () {
-		var dashItem = $('#dashboard > li');
+		var dashItem = $('.dashboard > li');
 		dashItem.each( function () {
 			var self = $(this);
 

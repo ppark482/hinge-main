@@ -16,22 +16,25 @@
   animation-duration: 3s;
   animation-delay: 2s; }
 
-.navigation {
-  flex: 0 0 calc((100vh/4) - 5px); }
-
-#dashboard li {
+.dashboard {
+  width: calc(100vh/4);
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #332b31;
-  width: 100%;
-  height: calc((100vh/4) - 5px);
-  margin-top: 5px; }
-  #dashboard li:hover {
-    cursor: pointer;
-    background-color: #dcddc2;
-    border: 1px solid #d01500;
-    color: #d01500; }
+  flex-flow: column nowrap;
+  flex: 0 0 calc(100vh/4); }
+  .dashboard li {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #332b31;
+    width: 100%;
+    margin-top: 5px; }
+    .dashboard li:hover {
+      cursor: pointer;
+      background-color: #dcddc2;
+      border: 1px solid #d01500;
+      color: #d01500; }
 
 .portfolio {
   height: 100vh;

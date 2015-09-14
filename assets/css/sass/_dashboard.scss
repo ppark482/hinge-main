@@ -1,18 +1,19 @@
-$nav-block: calc((100vh/4) - 5px);
+$nav-block: calc(100vh/4);
 
-.navigation {
+.dashboard {
+	width: $nav-block;
+	height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
 	flex: 0 0 $nav-block;
-}
-
-#dashboard {
 
 	li {
+		flex: 1 1 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background-color: $purple;
 		width: 100%;
-		height: $nav-block;
 		margin-top: 5px;
 
 		&:hover {
