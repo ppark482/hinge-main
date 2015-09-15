@@ -30,12 +30,13 @@
 	var projects = [
 		{
 			_id: 1,
-			title: 'Test Title',
+			title: 'Fruit Creative',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			github: 'www.example.com',
 			live: 'www.website.com',
 			thumbnail: 'portfolio/folio01.png',
-			image: 'portfolio/folio02.png'
+			image1: 'portfolio/folio02.png',
+			image2: 'portfolio/folio02.png'
 		},
 		{
 			_id: 2,
@@ -44,7 +45,8 @@
 			github: 'www.example2.com',
 			live: 'www.website2.com',
 			thumbnail: 'portfolio/folio03.png',
-			image: 'portfolio/folio04.png'
+			image1: 'portfolio/folio04.png',
+			image2: 'portfolio/folio02.png'
 		}
 	];
 
@@ -130,7 +132,8 @@
 	function buildSingleProject (project) {
 		$container.html('
 			<section class="single animated fadeIn">
-				<img src="img/' + project.image + '">
+				<img src="img/' + project.image1 + '">
+				<img src="img/' + project.image2 + '">
 				<h1>' + project.title + '</h1>
 				<p>' + project.description + '</p>
 				<a href="'+ project.link +'">Go to Live Project</a>
