@@ -17,11 +17,12 @@ $nav-block: calc(100vh/4);
 
 		&:hover {
 			cursor: crosshair;
-			border: 1px solid HSLA(358,73%,47%, .4);
-			color: $red;
-			transition: color 1.4s,
-						border 3s;
+			color: HSLA(358,73%,47%, .4);
+			transition: color .7s,
+						font-size .7s;
 			transition-timing-function: ease linear;
+			font-size: x-large;
 		}
+
 	}
 }

@@ -8,11 +8,12 @@
   width: 100%; }
 
 #inc {
-  width: 10%;
+  width: 20%;
+  height: auto;
   float: right;
   position: absolute;
-  right: -53px;
-  bottom: 4px;
+  right: -57px;
+  bottom: 15px;
   animation-duration: 3s;
   animation-delay: 2s; }
 
@@ -31,10 +32,10 @@
     margin-top: 5px; }
     .dashboard li:hover {
       cursor: crosshair;
-      border: 1px solid HSLA(358, 73%, 47%, 0.4);
-      color: #d01500;
-      transition: color 1.4s, border 3s;
-      transition-timing-function: ease linear; }
+      color: HSLA(358, 73%, 47%, 0.4);
+      transition: color 0.7s, font-size 0.7s;
+      transition-timing-function: ease linear;
+      font-size: x-large; }
 
 .portfolio {
   height: 100vh;
