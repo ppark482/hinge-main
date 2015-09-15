@@ -17,7 +17,7 @@
 			'title' 	: 'Our Work',
 			'tag'		: 'folio',
 			'option' 	: '',
-			'icon' 		: '<i class="fa fa-tasks"></i>'
+			'icon' 		: '<i class="fa fa-briefcase"></i>'
 		},
 		{
 			'title' 	: 'Contact Us',
@@ -51,6 +51,7 @@
 	];
 
 	var $container = $('.container');
+	var toProjects;
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
@@ -95,13 +96,7 @@
 							});
 						return;
 					} else {
-						$container.empty()
-						var images = [];
-						for ( var i = 0; i < projects.length; i++ ) {
-							images.push('<img data-project-id=' + projects[i]._id + ' class="portfolio-items animated fadeIn" src="img/' + projects[i].thumbnail + '">');
-						}
-						$container.html('<section class="portfolio">' + images.join('') + '</section>');
-						projectEvents();
+						toProjects();
 					}
 				});
 			}
@@ -114,6 +109,16 @@
 			}
 		});
 	};
+
+	toProjects = function () {
+		$container.empty()
+		var images = [];
+		for ( var i = 0; i < projects.length; i++ ) {
+			images.push('<img data-project-id=' + projects[i]._id + ' class="portfolio-items animated fadeIn" src="img/' + projects[i].thumbnail + '">');
+		}
+		$container.html('<section class="portfolio">' + images.join('') + '</section>');
+		projectEvents();
+	}
 
 	function projectEvents () {
 		var $items = $('.portfolio-items');
@@ -131,6 +136,7 @@
 
 	function buildSingleProject (project) {
 		$container.html('
+			<div id="back-button"><i class="fa fa-arrow-circle-left"></i></div>
 			<section class="single animated fadeIn">
 				<img src="img/' + project.image1 + '">
 				<img src="img/' + project.image2 + '">
@@ -140,6 +146,9 @@
 				<a href="'+ project.github +'">See the Code</a>
 			</section>
 		');
+		$('#back-button').on('click', function () {
+			toProjects();
+		})
 	};
 
 	buildDashboard();
