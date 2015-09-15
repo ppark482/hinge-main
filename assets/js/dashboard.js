@@ -90,14 +90,7 @@
 			// Our Work
 			if ( self[0].dataset.tag === 'folio' ) {
 				self.on('click', function () {
-					if ($('.portfolio-items').length) {
-							$('.portfolio-items').each( function () {
-								$(this).remove();
-							});
-						return;
-					} else {
-						toProjects();
-					}
+					toProjects();
 				});
 			}
 
