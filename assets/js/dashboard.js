@@ -38,6 +38,14 @@
 		},
 		{
 			_id: 2,
+			title: 'Flycast App',
+			github: 'https://github.com/rdanieldesign/FishingApp',
+			live: 'http://rdanieldesign.github.io/FishingApp/index.html#/',
+			thumbnail: 'flycast-1-thumb.png',
+			feature: 'flycast-2.png'
+		},
+		{
+			_id: 3,
 			title: 'Fruit Creative',
 			github: 'www.example2.com',
 			live: 'http://www.fruitcreative.co/',
@@ -45,7 +53,7 @@
 			feature: 'fruit-creative-2.png'
 		},
 		{
-			_id: 3,
+			_id: 4,
 			title: 'Maheq - Portfolio',
 			github: '',
 			live: 'http://maheq.com',
@@ -53,7 +61,15 @@
 			feature: 'maheq-2.png'
 		},
 		{
-			_id: 4,
+			_id: 5,
+			title: 'Trailer Park Shootout',
+			github: 'https://github.com/rdanieldesign/TurnGame',
+			live: 'http://rdanieldesign.github.io/TurnGame/',
+			thumbnail: 'trailer-park-shootout-1-thumb.png',
+			feature: 'trailer-park-shootout-2.png'
+		},
+		{
+			_id: 6,
 			title: 'Wandrlst App',
 			github: '',
 			live: 'http://chelseafranz.github.io/wandrlst/#/',
