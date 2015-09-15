@@ -22,4 +22,10 @@ $nav-block: calc(100vh/4);
 			transition-timing-function: ease linear;
 		}
 	}
+	.hover-icon { 
+		font-size: 25px;
+	}
+	.hover-words {
+		font-size: 0px;
+	}
 }
