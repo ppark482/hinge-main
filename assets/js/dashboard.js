@@ -155,7 +155,6 @@
 			<section class="single animated fadeIn">
 				<h1>' + project.title + '</h1>
 				<img src="img/' + project.feature + '">
-				<p>' + project.description + '</p>
 				<a href="'+ project.link +'">Go to Live Project</a>
 				<a href="'+ project.github +'">See the Code</a>
 			</section>
