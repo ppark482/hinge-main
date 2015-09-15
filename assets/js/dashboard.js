@@ -30,23 +30,19 @@
 	var projects = [
 		{
 			_id: 1,
-			title: 'Fruit Creative',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+			title: 'Alexa Crisa&#39;s Portfolio',
 			github: 'www.example.com',
-			live: 'http://www.fruitcreative.co/',
-			thumbnail: 'portfolio/folio01.png',
-			image1: 'portfolio/folio02.png',
-			image2: 'portfolio/folio02.png'
+			live: 'http://www.alexacrisa.com',
+			thumbnail: 'alexa-portfolio.png',
+			feature: 'alexa-portfolio.png'
 		},
 		{
 			_id: 2,
-			title: 'Test Title2',
-			description: '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+			title: 'Fruit Creative',
 			github: 'www.example2.com',
-			live: 'http://www.alexacrisa.com',
-			thumbnail: 'portfolio/folio03.png',
-			image1: 'portfolio/folio04.png',
-			image2: 'portfolio/folio02.png'
+			live: 'http://www.fruitcreative.co/',
+			thumbnail: 'fruit-creative-1.png',
+			feature: 'fruit-creative-2.png'
 		}
 	];
 
@@ -132,8 +128,7 @@
 			<div id="back-button"><i class="fa fa-arrow-circle-left"></i></div>
 			<section class="single animated fadeIn">
 				<h1>' + project.title + '</h1>
-				<img src="img/' + project.image1 + '">
-				<img src="img/' + project.image2 + '">
+				<img src="img/' + project.feature + '">
 				<p>' + project.description + '</p>
 				<a href="'+ project.link +'">Go to Live Project</a>
 				<a href="'+ project.github +'">See the Code</a>
