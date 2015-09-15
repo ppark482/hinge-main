@@ -74,7 +74,7 @@
 			github: '',
 			live: 'http://chelseafranz.github.io/wandrlst/#/',
 			thumbnail: 'wandrlst-1-thumb.png',
-			feature: 'wanderlst-2.png'
+			feature: 'wandrlst-2.png'
 		}
 	];
 
@@ -119,7 +119,7 @@
 			// Contact Us
 			if ( self[0].dataset.tag === 'contact' ) {
 				self.on('click', function () {
-					$container.html('<div id="contact-us" class="animated fadeIn">' + self[0].dataset.option + '</div>');
+					$container.html('<div id="contact-us" class="animated fadeIn"><a href="mailto:hello@hingeinc.co">' + self[0].dataset.option + '</a></div>');
 				});
 			}
 		});
