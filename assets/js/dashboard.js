@@ -4,32 +4,56 @@
 		{
 			'title' 	: 'Home',
 			'tag'		: 'intro',
-			'option' 	: ''
+			'option' 	: '',
+			'icon' 		: '<i class="fa fa-home"></i>'
 		},
 		{
 			'title' 	: 'About',
 			'tag'		: 'about',
-			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.'
+			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.',
+			'icon' 		: '<i class="fa fa-cog fa-spin"></i>'
 		},
 		{
 			'title' 	: 'Our Work',
 			'tag'		: 'folio',
-			'option' 	: ''
+			'option' 	: '',
+			'icon' 		: '<i class="fa fa-briefcase"></i>'
 		},
 		{
 			'title' 	: 'Contact Us',
 			'tag'		: 'contact',
-			'option' 	: 'hello@hingeinc.co'
+			'option' 	: 'hello@hingeinc.co',
+			'icon' 		: '<i class="fa fa-share"></i>'
 		}
 	];
 
-	var portfolioImgs = ['folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png', 'folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png'];
+	var projects = [
+		{
+			_id: 1,
+			title: 'Test Title',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+			github: 'www.example.com',
+			live: 'www.website.com',
+			thumbnail: 'portfolio/folio01.png',
+			image: 'portfolio/folio02.png'
+		},
+		{
+			_id: 2,
+			title: 'Test Title2',
+			description: '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+			github: 'www.example2.com',
+			live: 'www.website2.com',
+			thumbnail: 'portfolio/folio03.png',
+			image: 'portfolio/folio04.png'
+		}
+	];
 
 	var $container = $('.container');
+	var toProjects;
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
-			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].title + '</li>');
+			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].icon + dashboardItems[i].title + '</li>');
 		}
 		customEvents();
 	}
@@ -70,13 +94,7 @@
 							});
 						return;
 					} else {
-						$container.empty()
-						var images = [];
-						for ( var i = 0; i < portfolioImgs.length; i++ ) {
-							images.push('<img class="portfolio-items animated fadeIn" src="img/portfolio/' + portfolioImgs[i] + '">');
-						}
-						$container.html('<section class="portfolio">' + images.join('') + '</section>');
-						projectEvents();
+						toProjects();
 					}
 				});
 			}
@@ -88,6 +106,16 @@
 				});
 			}
 		});
+	};
+
+	toProjects = function () {
+		$container.empty()
+		var images = [];
+		for ( var i = 0; i < projects.length; i++ ) {
+			images.push('<img data-project-id=' + projects[i]._id + ' class="portfolio-items animated fadeIn" src="img/' + projects[i].thumbnail + '">');
+		}
+		$container.html('<section class="portfolio">' + images.join('') + '</section>');
+		projectEvents();
 	}
 
 	function projectEvents () {
@@ -95,11 +123,30 @@
 
 		$items.each( function(item){
 			$(this).on('click', function(){
-				$items.addClass('hidden');
-				$(this).removeClass('hidden').addClass('expanded');
+				var id = $(this).data('project-id');
+				var single = projects.filter(function(project){
+					return project._id == id;
+				})[0];
+				buildSingleProject(single);
 			});
 		});
-	}
+	};
+
+	function buildSingleProject (project) {
+		$container.html('
+			<div id="back-button"><i class="fa fa-arrow-circle-left"></i></div>
+			<section class="single animated fadeIn">
+				<img src="img/' + project.image + '">
+				<h1>' + project.title + '</h1>
+				<p>' + project.description + '</p>
+				<a href="'+ project.link +'">Go to Live Project</a>
+				<a href="'+ project.github +'">See the Code</a>
+			</section>
+		');
+		$('#back-button').on('click', function () {
+			toProjects();
+		})
+	};
 
 	buildDashboard();
 
