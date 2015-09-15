@@ -30,10 +30,10 @@
 	var projects = [
 		{
 			_id: 1,
-			title: 'Alexa Crisa&#39;s Portfolio',
+			title: 'Alexa Crisa - Portfolio',
 			github: 'www.example.com',
 			live: 'http://www.alexacrisa.com',
-			thumbnail: 'alexa-portfolio.png',
+			thumbnail: 'alexa-portfolio-thumb.png',
 			feature: 'alexa-portfolio.png'
 		},
 		{
@@ -41,8 +41,24 @@
 			title: 'Fruit Creative',
 			github: 'www.example2.com',
 			live: 'http://www.fruitcreative.co/',
-			thumbnail: 'fruit-creative-1.png',
+			thumbnail: 'fruit-creative-1-thumb.png',
 			feature: 'fruit-creative-2.png'
+		},
+		{
+			_id: 3,
+			title: 'Maheq - Portfolio',
+			github: '',
+			live: 'http://maheq.com',
+			thumbnail: 'maheq-1-thumb.png',
+			feature: 'maheq-2.png'
+		},
+		{
+			_id: 4,
+			title: 'Wandrlst App',
+			github: '',
+			live: 'http://chelseafranz.github.io/wandrlst/#/',
+			thumbnail: 'wandrlst-1-thumb.png',
+			feature: 'wanderlst-2.png'
 		}
 	];
 
