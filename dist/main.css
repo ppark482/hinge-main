@@ -46,6 +46,21 @@
   margin: 5px 0 0 5px;
   float: left; }
 
+.single {
+  height: 100vh;
+  overflow: scroll;
+  padding: 5px;
+  max-width: 900px;
+  margin: 0 auto; }
+  .single h1 {
+    text-align: center;
+    margin: 50px; }
+  .single p {
+    margin: 50px; }
+  .single img {
+    width: 100%;
+    margin: 0 auto 5px auto; }
+
 #about-message {
   color: #dcddc2;
   animation-duration: 3s;
