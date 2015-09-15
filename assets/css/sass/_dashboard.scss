@@ -12,15 +12,17 @@ $nav-block: calc(100vh/4);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: $purple;
 		width: 100%;
 		margin-top: 5px;
 
 		&:hover {
-			cursor: pointer;
-			background-color: $white;
-			border: 1px solid $red;
-			color: $red;
+			cursor: crosshair;
+			color: HSLA(358,73%,47%, .4);
+			transition: color .7s,
+						font-size .7s;
+			transition-timing-function: ease linear;
+			font-size: x-large;
 		}
+
 	}
 }
