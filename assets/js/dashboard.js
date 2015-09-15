@@ -30,21 +30,23 @@
 	var projects = [
 		{
 			_id: 1,
-			title: 'Test Title',
+			title: 'Fruit Creative',
 			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			github: 'www.example.com',
-			live: 'www.website.com',
+			live: 'http://www.fruitcreative.co/',
 			thumbnail: 'portfolio/folio01.png',
-			image: 'portfolio/folio02.png'
+			image1: 'portfolio/folio02.png',
+			image2: 'portfolio/folio02.png'
 		},
 		{
 			_id: 2,
 			title: 'Test Title2',
 			description: '2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 			github: 'www.example2.com',
-			live: 'www.website2.com',
+			live: 'http://www.alexacrisa.com',
 			thumbnail: 'portfolio/folio03.png',
-			image: 'portfolio/folio04.png'
+			image1: 'portfolio/folio04.png',
+			image2: 'portfolio/folio02.png'
 		}
 	];
 
@@ -88,14 +90,7 @@
 			// Our Work
 			if ( self[0].dataset.tag === 'folio' ) {
 				self.on('click', function () {
-					if ($('.portfolio-items').length) {
-							$('.portfolio-items').each( function () {
-								$(this).remove();
-							});
-						return;
-					} else {
-						toProjects();
-					}
+					toProjects();
 				});
 			}
 
@@ -136,8 +131,9 @@
 		$container.html('
 			<div id="back-button"><i class="fa fa-arrow-circle-left"></i></div>
 			<section class="single animated fadeIn">
-				<img src="img/' + project.image + '">
 				<h1>' + project.title + '</h1>
+				<img src="img/' + project.image1 + '">
+				<img src="img/' + project.image2 + '">
 				<p>' + project.description + '</p>
 				<a href="'+ project.link +'">Go to Live Project</a>
 				<a href="'+ project.github +'">See the Code</a>
