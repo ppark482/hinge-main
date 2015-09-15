@@ -128,7 +128,15 @@
 	};
 
 	function buildSingleProject (project) {
-		$container.html('<section class="single animated fadeIn"><img src="img/' + project.image + '"></section>')
+		$container.html('
+			<section class="single animated fadeIn">
+				<img src="img/' + project.image + '">
+				<h1>' + project.title + '</h1>
+				<p>' + project.description + '</p>
+				<a href="'+ project.link +'">Go to Live Project</a>
+				<a href="'+ project.github +'">See the Code</a>
+			</section>
+		');
 	};
 
 	buildDashboard();
