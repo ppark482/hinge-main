@@ -44,8 +44,6 @@
 		}
 	];
 
-	var portfolioImgs = ['folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png', 'folio01.png', 'folio02.png', 'folio03.png', 'folio04.png', 'folio05.png', 'folio06.png'];
-
 	var $container = $('.container');
 
 	function buildDashboard () {
