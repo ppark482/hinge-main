@@ -16,12 +16,10 @@ $nav-block: calc(100vh/4);
 		margin-top: 5px;
 
 		&:hover {
-			cursor: crosshair;
-			color: HSLA(358,73%,47%, .4);
+			color:HSL(6,100%,41%);
 			transition: color .7s,
 						font-size .7s;
 			transition-timing-function: ease linear;
-			font-size: x-large;
 		}
 
 	}
