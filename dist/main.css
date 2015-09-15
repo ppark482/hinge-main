@@ -48,7 +48,7 @@
 
 .single {
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 5px;
   max-width: 900px;
   margin: 0 auto; }

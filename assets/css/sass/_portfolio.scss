@@ -14,7 +14,7 @@ $item-width: calc(((100vw - (100vh/4))/3) - 5px);
 
 .single {
 	height: 100vh;
-	overflow: scroll;
+	overflow-y: scroll;
 	padding: 5px;
 	max-width: 900px;
 	margin: 0 auto;
