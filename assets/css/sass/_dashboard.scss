@@ -21,6 +21,13 @@ $nav-block: calc(100vh/4);
 						font-size .7s;
 			transition-timing-function: ease linear;
 		}
-
 	}
+
+}
+
+.hover-icon{
+	font-size: 25px;
+}
+.hover-words{
+	font-size: 0px;
 }

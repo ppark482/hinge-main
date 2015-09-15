@@ -35,6 +35,12 @@
       transition: color 0.7s, font-size 0.7s;
       transition-timing-function: ease linear; }
 
+.hover-icon {
+  font-size: 25px; }
+
+.hover-words {
+  font-size: 0px; }
+
 .portfolio-items {
   width: calc(((100vw - (100vh/4))/3) - 5px);
   height: calc(((100vw - (100vh/4))/3) - 5px);
