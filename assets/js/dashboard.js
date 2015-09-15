@@ -73,13 +73,7 @@
 			// About Us
 			if ( self[0].dataset.tag === 'about' ) {
 				self.on('click', function () {
-
-					if ($('#about-message').length) {
-						$('#about-message').remove();
-						return;
-					} else {
-						$container.html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
-					}
+					$container.html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
 				});
 			}
 
