@@ -59,6 +59,12 @@
   .single img {
     width: 100%;
     margin: 0 auto 5px auto; }
+  .single a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 5px;
+    color: #d01500; }
 
 #about-message {
   color: #dcddc2;
@@ -102,6 +108,9 @@ ul, li {
   border: none;
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
 
 img {
   display: block;

@@ -30,19 +30,51 @@
 	var projects = [
 		{
 			_id: 1,
-			title: 'Alexa Crisa&#39;s Portfolio',
+			title: 'Alexa Crisa - Portfolio',
 			github: 'www.example.com',
 			live: 'http://www.alexacrisa.com',
-			thumbnail: 'alexa-portfolio.png',
+			thumbnail: 'alexa-portfolio-thumb.png',
 			feature: 'alexa-portfolio.png'
 		},
 		{
 			_id: 2,
+			title: 'Flycast App',
+			github: 'https://github.com/rdanieldesign/FishingApp',
+			live: 'http://rdanieldesign.github.io/FishingApp/index.html#/',
+			thumbnail: 'flycast-1-thumb.png',
+			feature: 'flycast-2.png'
+		},
+		{
+			_id: 3,
 			title: 'Fruit Creative',
 			github: 'www.example2.com',
 			live: 'http://www.fruitcreative.co/',
-			thumbnail: 'fruit-creative-1.png',
+			thumbnail: 'fruit-creative-1-thumb.png',
 			feature: 'fruit-creative-2.png'
+		},
+		{
+			_id: 4,
+			title: 'Maheq - Portfolio',
+			github: '',
+			live: 'http://maheq.com',
+			thumbnail: 'maheq-1-thumb.png',
+			feature: 'maheq-2.png'
+		},
+		{
+			_id: 5,
+			title: 'Trailer Park Shootout',
+			github: 'https://github.com/rdanieldesign/TurnGame',
+			live: 'http://rdanieldesign.github.io/TurnGame/',
+			thumbnail: 'trailer-park-shootout-1-thumb.png',
+			feature: 'trailer-park-shootout-2.png'
+		},
+		{
+			_id: 6,
+			title: 'Wandrlst App',
+			github: '',
+			live: 'http://chelseafranz.github.io/wandrlst/#/',
+			thumbnail: 'wandrlst-1-thumb.png',
+			feature: 'wandrlst-2.png'
 		}
 	];
 
@@ -73,13 +105,7 @@
 			// About Us
 			if ( self[0].dataset.tag === 'about' ) {
 				self.on('click', function () {
-
-					if ($('#about-message').length) {
-						$('#about-message').remove();
-						return;
-					} else {
-						$container.html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
-					}
+					$container.html('<div class="animated fadeIn" id="about-message">' + self[0].dataset.option + '</div>');
 				});
 			}
 
@@ -129,7 +155,6 @@
 			<section class="single animated fadeIn">
 				<h1>' + project.title + '</h1>
 				<img src="img/' + project.feature + '">
-				<p>' + project.description + '</p>
 				<a href="'+ project.link +'">Go to Live Project</a>
 				<a href="'+ project.github +'">See the Code</a>
 			</section>
