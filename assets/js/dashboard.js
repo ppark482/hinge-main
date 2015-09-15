@@ -4,22 +4,26 @@
 		{
 			'title' 	: 'Home',
 			'tag'		: 'intro',
-			'option' 	: ''
+			'option' 	: '',
+			'icon' 		: '<i class="fa fa-home"></i>'
 		},
 		{
 			'title' 	: 'About',
 			'tag'		: 'about',
-			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.'
+			'option' 	: 'Hinge offers web development by web developers. No sales people to deal with. No client engagement. Just clean, modern and fast development.',
+			'icon' 		: '<i class="fa fa-cog fa-spin"></i>'
 		},
 		{
 			'title' 	: 'Our Work',
 			'tag'		: 'folio',
-			'option' 	: ''
+			'option' 	: '',
+			'icon' 		: '<i class="fa fa-tasks"></i>'
 		},
 		{
 			'title' 	: 'Contact Us',
 			'tag'		: 'contact',
-			'option' 	: 'hello@hingeinc.co'
+			'option' 	: 'hello@hingeinc.co',
+			'icon' 		: '<i class="fa fa-share"></i>'
 		}
 	];
 
@@ -48,7 +52,7 @@
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
-			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].title + '</li>');
+			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].icon + dashboardItems[i].title + '</li>');
 		}
 		customEvents();
 	}
