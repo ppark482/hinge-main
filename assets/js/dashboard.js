@@ -55,7 +55,7 @@
 
 	function buildDashboard () {
 		for ( var i = 0; i < dashboardItems.length; i++ ) {
-			$('.dashboard').append('<li data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].icon + dashboardItems[i].title + '</li>');
+			$('.dashboard').append('<li class="hvr-rotate" data-tag="' + dashboardItems[i].tag + '" data-option="' + dashboardItems[i].option + '">' + dashboardItems[i].icon + dashboardItems[i].title + '</li>');
 		}
 		customEvents();
 	}
