@@ -27,14 +27,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #332b31;
     width: 100%;
     margin-top: 5px; }
     .dashboard li:hover {
-      cursor: pointer;
-      background-color: #dcddc2;
-      border: 1px solid #d01500;
-      color: #d01500; }
+      cursor: crosshair;
+      border: 1px solid HSLA(358, 73%, 47%, 0.4);
+      color: #d01500;
+      transition: color 1.4s, border 3s;
+      transition-timing-function: ease linear; }
 
 .portfolio {
   height: 100vh;
