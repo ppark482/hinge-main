@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	connect = require('gulp-connect'),
 	sass = require('gulp-sass'),
 	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	vendorFiles = require('./vendorFiles.json');
 
 gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
 
@@ -15,7 +16,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('vendor-css', function () {
-	return gulp.src('./assets/css/*.css')
+	return gulp.src(vendorFiles.styles)
 	.pipe(concat('vendor.css'))
 	.pipe(gulp.dest('./dist'))
 	.pipe(connect.reload());
