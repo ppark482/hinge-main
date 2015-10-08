@@ -2,14 +2,14 @@
 	
 	angular
 		.module('app')
-		.directive('BrightBox', BrightBoxDirective);
+		.directive('brightBox', BrightBoxDirective);
 
 	BrightBoxDirective.$inject = [];
 
 	function BrightBoxDirective () {
 		var directive = {
 			link: link,
-			template: 'bright-box-tpl.html',
+			template: 'template/bright-box-tpl.html',
 			scope: {
 				boxName: '=' // name of box from DOM
 			},
