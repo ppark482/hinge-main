@@ -22,7 +22,7 @@ gulp.task('vendor-css', function () {
 });
 
 gulp.task('js', function() {
-	return gulp.src('./assets/js/*.js')
+	return gulp.src(['main/app.js', 'main/routes.js', './components/**/*.js'])
     .pipe( concat('main.js'))
     .pipe( uglify() )
     .pipe( gulp.dest('./dist'))
