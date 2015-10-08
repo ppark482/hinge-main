@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
 
 gulp.task('sass', function () {
-	return gulp.src('./assets/css/sass/main.scss')
+	return gulp.src('./assets/styles/main.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(concat('main.css'))
 	.pipe(gulp.dest('./dist'))
