@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/ppark482/hinge-main",
   "devDependencies": {
-    "angular": "^1.4.7",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.2.0",
@@ -32,6 +31,7 @@
     "angular-ui-bootstrap": "^0.13.4",
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.5",
+    "editorconfig": "^0.12.2",
     "jquery": "^2.1.4"
   }
 }
