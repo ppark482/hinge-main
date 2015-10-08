@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	vendorFiles = require('./vendorFiles.json');
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect', 'watch']);
 
 gulp.task('sass', function () {
 	return gulp.src('./assets/styles/main.scss')
@@ -49,6 +49,16 @@ gulp.task('html', function() {
 	return gulp.src(['./index.html'])
 	.pipe( gulp.dest('./dist'))
 	.pipe(connect.reload());
+});
+
+gulp.task('templates', function() {
+	var components = gulp.src(['./components/**/*.html'])
+	.pipe( gulp.dest('./dist/templates/components'))
+	.pipe(connect.reload());
+	var main = gulp.src(['./main/**/*.html'])
+	.pipe( gulp.dest('./dist/templates/main'))
+	.pipe(connect.reload());
+	return [components, main];
 });
 
 gulp.task('connect', function(){

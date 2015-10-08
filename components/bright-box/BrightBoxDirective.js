@@ -9,7 +9,7 @@
 	function BrightBoxDirective () {
 		var directive = {
 			link: link,
-			template: 'template/bright-box-tpl.html',
+			template: 'templates/bright-box/bright-box-tpl.html',
 			scope: {
 				boxName: '=' // name of box from DOM
 			},
