@@ -5,8 +5,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	vendorFiles = require('./vendorFiles.json');
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
-
 gulp.task('sass', function () {
 	return gulp.src('./assets/styles/main.scss')
 	.pipe(sass().on('error', sass.logError))
@@ -58,11 +56,13 @@ gulp.task('connect', function(){
 	});
 });
 
-gulp.task('watch', function () {
-	gulp.watch('./assets/css/sass/*.scss',['sass']);
-	gulp.watch('./assets/css/*.css',['vendor-css']);
-    gulp.watch('./assets/js/*.js',['js']);
-	gulp.watch('./assets/js/vendor/*.js',['vendor-js']);
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
+
+gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect'], function () {
+	gulp.watch(['./assets/styles/*.scss', './components/**/*.scss'],['sass']);
+    gulp.watch(['./assets/js/*.js', './components/**/*.js'],['js']);
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
-    gulp.watch('./index.html',['html']);
+    gulp.watch(['./index.html', './components/**/*.html'],['html']);
 });
+
+gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images']);
