@@ -1,8 +1,8 @@
-var 	gulp = require('gulp'),
-			connect = require('gulp-connect'),
-			sass = require('gulp-sass'),
-			concat = require('gulp-concat'),
-			uglify = require('gulp-uglify');
+var gulp = require('gulp'),
+	connect = require('gulp-connect'),
+	sass = require('gulp-sass'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglify');
 
 gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
 
