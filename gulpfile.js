@@ -31,9 +31,10 @@ gulp.task('js', function() {
 });
 
 gulp.task('vendor-js', function() {
-	return gulp.src('./assets/js/vendor/*.js')
+	return gulp.src(vendorFiles.scripts)
+	.pipe( concat('vendor.js'))
 	.pipe( uglify() )
-	.pipe( gulp.dest('./dist/vendor-js'))
+	.pipe( gulp.dest('./dist'))
 	.pipe(connect.reload());
 });
 
