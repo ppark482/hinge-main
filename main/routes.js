@@ -3,8 +3,16 @@
 
 	angular
 		.module('app')
-		.config(function () {
+		.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-	});
+			$urlRouterProvider.otherwise('/');
+
+			$stateProvider
+				.state('home', {
+					url: '/',
+					templateUrl: 'main/home.html'
+			});
+		}
+	]);
 
 }());
