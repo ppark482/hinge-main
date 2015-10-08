@@ -5,8 +5,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	vendorFiles = require('./vendorFiles.json');
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect', 'watch']);
-
 gulp.task('sass', function () {
 	return gulp.src('./assets/styles/main.scss')
 	.pipe(sass().on('error', sass.logError))
@@ -44,7 +42,6 @@ gulp.task('images', function(){
 	.pipe(connect.reload());
 });
 
-
 gulp.task('html', function() {
 	return gulp.src(['./index.html'])
 	.pipe( gulp.dest('./dist'))
@@ -52,10 +49,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('templates', function() {
-	var components = gulp.src(['./components/**/*.html'])
+	var components = gulp.src('./components/**/*.html')
 	.pipe( gulp.dest('./dist/templates/components'))
 	.pipe(connect.reload());
-	var main = gulp.src(['./main/**/*.html'])
+	var main = gulp.src('./main/**/*.html')
 	.pipe( gulp.dest('./dist/templates/main'))
 	.pipe(connect.reload());
 	return [components, main];
@@ -68,13 +65,14 @@ gulp.task('connect', function(){
 	});
 });
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect', 'watch']);
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect', 'watch']);
 
-gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'connect'], function () {
+gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect'], function () {
 	gulp.watch(['./assets/styles/*.scss', './components/**/*.scss'],['sass']);
     gulp.watch(['./assets/js/*.js', './components/**/*.js'],['js']);
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
     gulp.watch(['./index.html', './components/**/*.html'],['html']);
+	gulp.watch(['./components/**/*.html', './main/**/*.html'],['templates']);
 });
 
 gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images']);
