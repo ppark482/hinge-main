@@ -10,7 +10,7 @@
 			$stateProvider
 				.state('home', {
 					url: '/',
-					templateUrl: 'template/home.html'
+					templateUrl: 'templates/main/home.html'
 			});
 		}
 	]);

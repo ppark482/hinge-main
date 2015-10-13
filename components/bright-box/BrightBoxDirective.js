@@ -9,27 +9,19 @@
 	function BrightBoxDirective () {
 		var directive = {
 			link: link,
-			template: 'templates/bright-box/bright-box-tpl.html',
+			templateUrl: '/templates/components/bright-box/bright-box-tpl.html',
+			restrict: 'A',
 			scope: {
-				boxName: '=' // name of box from DOM
-			},
-			restrict: 'EA',
-			controller: BrightBoxController,
-			controllerAs: 'vm',
-			bindToController: true
+				boxName: '@'
+			}
 		};
 
 		return directive;
 
-		function link (scope, element, attrs, ctrl) {
-			console.log(scope.vm); // vm object from controller
+		function link (scope, element, attrs) {
+			console.log(scope);
+			console.log(element);
 		}
-	}
-
-	BrightBoxController.$inject = ['$scope'];
-
-	function BrightBoxController () {
-		var vm = this;
 	}
 
 }());
