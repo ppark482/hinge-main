@@ -42,7 +42,6 @@ gulp.task('images', function(){
 	.pipe(connect.reload());
 });
 
-
 gulp.task('html', function() {
 	return gulp.src(['./index.html'])
 	.pipe( gulp.dest('./dist'))
@@ -50,10 +49,10 @@ gulp.task('html', function() {
 });
 
 gulp.task('templates', function() {
-	var components = gulp.src(['./components/**/*.html'])
+	var components = gulp.src('./components/**/*.html')
 	.pipe( gulp.dest('./dist/templates/components'))
 	.pipe(connect.reload());
-	var main = gulp.src(['./main/**/*.html'])
+	var main = gulp.src('./main/**/*.html')
 	.pipe( gulp.dest('./dist/templates/main'))
 	.pipe(connect.reload());
 	return [main, components];
@@ -74,5 +73,7 @@ gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates'
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
     gulp.watch(['./index.html', './main/**/*.html', './components/**/*.html'],['html', 'templates']);
 });
+
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect', 'watch']);
 
 gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images']);
