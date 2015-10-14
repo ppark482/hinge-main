@@ -4,23 +4,27 @@
 		.module('app')
 		.directive('brightBox', BrightBoxDirective);
 
-	BrightBoxDirective.$inject = [];
+	BrightBoxDirective.$inject = ['AssetService'];
 
-	function BrightBoxDirective () {
+	function BrightBoxDirective (AssetService) {
 		var directive = {
 			link: link,
 			templateUrl: '/templates/components/bright-box/bright-box-tpl.html',
 			restrict: 'A',
 			scope: {
-				boxName: '@'
+				boxName: '@',
+				image: '@'
 			}
 		};
 
 		return directive;
 
 		function link (scope, element, attrs) {
-			console.log(scope);
-			console.log(element);
+			// var images = AssetService.getImages();
+			// images.then( function (images) {
+			// 	console.log(images);
+			// });
+			console.log(scope.image);
 		}
 	}
 

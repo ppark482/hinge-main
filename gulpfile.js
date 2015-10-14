@@ -21,7 +21,7 @@ gulp.task('vendor-css', function () {
 });
 
 gulp.task('js', function() {
-	return gulp.src(['main/app.js', 'main/routes.js', './components/**/*.js'])
+	return gulp.src(['main/app.js', 'main/routes.js', './components/**/*.js', './shared/**/*.js'])
     .pipe( concat('main.js'))
     .pipe( uglify() )
     .pipe( gulp.dest('./dist'))
@@ -69,7 +69,7 @@ gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'template
 
 gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'connect'], function () {
 	gulp.watch(['./assets/styles/*.scss', './components/**/*.scss'],['sass']);
-    gulp.watch(['./assets/js/*.js', './components/**/*.js'],['js']);
+    gulp.watch(['./assets/js/*.js', './components/**/*.js', './shared/**/*.js'],['js']);
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
     gulp.watch(['./index.html', './main/**/*.html', './components/**/*.html'],['html', 'templates']);
 });

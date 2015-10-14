@@ -4,14 +4,14 @@
 		.module('app')
 		.directive('homeSlider', SliderDirective);
 
-	SliderDirective.$inject = [];
+	SliderDirective.$inject = ['AssetService'];
 
-	function SliderDirective () {
+	function SliderDirective (AssetService) {
 		var directive = {
 			link: link,
 			templateUrl: '/templates/components/slider/slider-tpl.html',
 			replace: 'true',
-			restrict: 'A',
+			restrict: 'E',
 			scope: {
 				vm: '='
 			}
@@ -23,6 +23,7 @@
 			scope.vm = {
 				something: 'oawiehfaoiwehf'
 			}
+
 		}
 	}
 
