@@ -10,7 +10,6 @@
 		var directive = {
 			link: link,
 			templateUrl: '/templates/components/slider/slider-tpl.html',
-			replace: 'true',
 			restrict: 'E',
 			scope: {
 				vm: '='

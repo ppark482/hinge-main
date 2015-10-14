@@ -1,9 +1,14 @@
 @import 'variables';
 @import 'components/slider/slider';
 @import 'components/bright-box/bright-box';
+@import 'logo';
 
 /* ----- Global ----- */
 
 ul, li {
 	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
 }
