@@ -7,10 +7,9 @@
 	position: relative;
 
 	h3 {
+		@include center;
 		padding: 10px;
 		color: white;
-		position: absolute;
-		top: 40%;
 		display: block;
 		width: 100%;
 		margin: 0 auto;

@@ -29,7 +29,6 @@
 
 			AssetService.getSlides().success( function(data){
 				scope.slides = data;
-				console.log(scope.slides);
 			});
 		}
 	}
