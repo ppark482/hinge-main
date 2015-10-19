@@ -2,10 +2,12 @@
 @import 'components/slider/slider';
 @import 'components/bright-box/bright-box';
 @import 'logo';
+@import 'navigation';
 
 /* ----- Global ----- */
 
-ul, li {
+ul,
+li {
 	list-style-type: none;
 }
 

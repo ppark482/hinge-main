@@ -1,5 +1,5 @@
 ;(function(){
-	
+
 	angular
 		.module('app')
 		.directive('brightBox', BrightBoxDirective);
@@ -24,8 +24,8 @@
 			// images.then( function (images) {
 			// 	console.log(images);
 			// });
-			console.log(scope.image);
+			// console.log(scope.image);
 		}
 	}
 
-}());
+})();

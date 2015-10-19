@@ -21,8 +21,16 @@
 		function link (scope, element, attrs) {
 			scope.vm = {
 				something: 'oawiehfaoiwehf'
-			}
+			};
 
+			scope.changeSlide = function(slideIndex){
+				scope.slidePosition = slideIndex;
+			};
+
+			AssetService.getSlides().success( function(data){
+				scope.slides = data;
+				console.log(scope.slides);
+			});
 		}
 	}
 

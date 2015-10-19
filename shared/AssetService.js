@@ -30,9 +30,14 @@
             return deferred.promise;
 		}
 
+		function getSlides () {
+			return $http.get('./slideshow.json');
+		}
+
 		return {
 			getImages 		: getImages,
-			getPortfolio 	: getPortfolio
+			getPortfolio 	: getPortfolio,
+			getSlides		: getSlides
 		}
 	}
 

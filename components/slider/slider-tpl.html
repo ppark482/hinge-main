@@ -1,7 +1,11 @@
 <ul rn-carousel
 	rn-carousel-auto-slide
+	rn-carousel-index='slidePosition'
 	class="slides">
-		<li data-slide-order="1">slide 1</li>
-		<li data-slide-order="2">slide 2</li>
-		<li data-slide-order="3">slide 3</li>
+	<li ng-repeat="slide in slides">
+		<div back-img="{{slide.image}}" class="slide-bg">{{ slide.text }}</div>
+	</li>
+</ul>
+<ul class="slide-nav">
+	<li ng-repeat="bullet in slides" ng-click="changeSlide($index)">{{ $index + 1 }}</li>
 </ul>

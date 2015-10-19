@@ -4,14 +4,24 @@
 	padding-left: 0;
 	background: grey;
 	height: 100vh;
+	position: relative;
 }
 
 .slides {
 	height: 100vh;
+	margin-bottom: 0;
+}
 
-	li {
-		background-image: url('http://lorempixel.com/g/800/600/');
-		background-size: cover;
-		width: 100%;
-	}
+.slide-bg {
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide-nav {
+	position: absolute;
+	right: 2rem;
+	top: 50%;
+	color: white;
 }

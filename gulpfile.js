@@ -58,6 +58,12 @@ gulp.task('templates', function() {
 	return [main, components];
 });
 
+gulp.task('json', function() {
+	return gulp.src(['./slideshow.json'])
+	.pipe( gulp.dest('./dist'))
+	.pipe(connect.reload());
+});
+
 gulp.task('connect', function(){
 	return connect.server({
 		root: 'dist',
@@ -65,15 +71,14 @@ gulp.task('connect', function(){
 	});
 });
 
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'connect', 'watch']);
+gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'json', 'connect', 'watch']);
 
 gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'connect'], function () {
 	gulp.watch(['./assets/styles/*.scss', './components/**/*.scss'],['sass']);
     gulp.watch(['./assets/js/*.js', './components/**/*.js', './shared/**/*.js'],['js']);
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
     gulp.watch(['./index.html', './main/**/*.html', './components/**/*.html'],['html', 'templates']);
+	gulp.watch(['./slideshow.json'],['json']);
 });
-
-gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'templates', 'html', 'images', 'connect', 'watch']);
 
 gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images']);
