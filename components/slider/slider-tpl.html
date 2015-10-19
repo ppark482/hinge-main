@@ -10,5 +10,8 @@
 	</li>
 </ul>
 <ul class="slide-nav">
-	<li ng-repeat="bullet in slides" ng-click="changeSlide($index)">{{ $index + 1 }}</li>
+	<li ng-repeat="bullet in slides"
+		ng-click="changeSlide($index)"
+		ng-class="{true: 'active', false: ''}[$index == slidePosition]">
+	</li>
 </ul>

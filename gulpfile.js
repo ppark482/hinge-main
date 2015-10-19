@@ -73,7 +73,7 @@ gulp.task('connect', function(){
 
 gulp.task('default', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'json', 'connect', 'watch']);
 
-gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'connect'], function () {
+gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates', 'images', 'json', 'connect'], function () {
 	gulp.watch(['./assets/styles/*.scss', './components/**/*.scss'],['sass']);
     gulp.watch(['./assets/js/*.js', './components/**/*.js', './shared/**/*.js'],['js']);
 	gulp.watch(['./assets/img/**/*.jpg', './assets/img/**/*.png', './assets/img/**/*.svg'],['images']);
@@ -81,4 +81,4 @@ gulp.task('watch', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'templates'
 	gulp.watch(['./slideshow.json'],['json']);
 });
 
-gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images']);
+gulp.task('build', ['js', 'vendor-js', 'sass', 'vendor-css', 'html', 'images', 'json']);
