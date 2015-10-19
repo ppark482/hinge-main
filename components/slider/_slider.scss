@@ -1,5 +1,17 @@
 .slider {
 	margin: 0;
+	padding-right: 0;
+	padding-left: 0;
 	background: grey;
 	height: 100vh;
+}
+
+.slides {
+	height: 100vh;
+
+	li {
+		background-image: url('http://lorempixel.com/g/800/600/');
+		background-size: cover;
+		width: 100%;
+	}
 }
