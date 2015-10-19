@@ -1,13 +1,14 @@
 {
 	"styles": [
-		"node_modules/bootstrap/dist/css/bootstrap.min.css"
+		"node_modules/bootstrap/dist/css/bootstrap.min.css",
+		"node_modules/angular-carousel/dist/angular-carousel.min.css"
 	],
 	"scripts": [
 		"node_modules/jquery/dist/jquery.min.js",
 		"node_modules/angular/angular.min.js",
 		"node_modules/angular-ui-router/build/angular-ui-router.min.js",
-		"node_modules/angular-ui-bootstrap/ui-bootstrap.min.js",
-		"node_modules/angular-resource/angular-resource.min.js"
-
+		"node_modules/angular-touch/angular-touch.min.js",
+		"node_modules/angular-carousel/dist/angular-carousel.min.js",
+		"node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"
 	]
 }
