@@ -1,17 +1,17 @@
 [
 	{
-		"title": "title1",
+		"title": "Test Title 1",
 		"image": "img/mint.jpg",
-		"text": "blah blah blah"
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 	},
 	{
-		"title": "title1",
+		"title": "Another Test Title",
 		"image": "img/mint.jpg",
-		"text": "blah blah blah"
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 	},
 	{
-		"title": "title2",
+		"title": "And Yet Another",
 		"image": "img/mint.jpg",
-		"text": "blah 332532bla35353h blah"
+		"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 	}
 ]
