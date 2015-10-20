@@ -19,9 +19,6 @@
 		return directive;
 
 		function link (scope, element, attrs) {
-			scope.vm = {
-				something: 'oawiehfaoiwehf'
-			};
 
 			scope.changeSlide = function(slideIndex){
 				scope.slidePosition = slideIndex;

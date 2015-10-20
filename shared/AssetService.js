@@ -34,10 +34,23 @@
 			return $http.get('./slideshow.json');
 		}
 
+		function getClient(client) {
+			var deferred = $q.defer();
+			$http.get('./portfolio.json').success( function (data) {
+				angular.forEach(data, function (x) {
+					if (x.client === client) {
+						deferred.resolve(x);
+					}
+				})
+			});
+			return deferred.promise;
+		}
+
 		return {
 			getImages 		: getImages,
 			getPortfolio 	: getPortfolio,
-			getSlides		: getSlides
+			getSlides		: getSlides,
+			getClient 		: getClient
 		}
 	}
 
