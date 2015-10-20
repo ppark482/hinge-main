@@ -9,6 +9,10 @@
 
 /* ----- Global ----- */
 
+html {
+	background-color: black;
+}
+
 ul,
 li {
 	list-style-type: none;
@@ -24,4 +28,5 @@ img {
 	position: relative;
 	width: 100%;
 	overflow-x: hidden;
+	overflow-y: auto;
 }

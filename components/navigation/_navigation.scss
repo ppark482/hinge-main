@@ -1,18 +1,20 @@
 .navigation {
 	margin: 0;
 	padding: 0;
-	position: absolute;
+	position: fixed;
 	right: -100vw;
 	top: 0;
 	z-index: 99;
 	@include transition(right, ease-out, 200ms);
 
 	#homepage & {
-		@include offScreenNav;
+		@include offScreenNav(false);
 	}
 
-	#portfolio & {
-		@include offScreenNav(false);
+	#portfolio &,
+	#about &,
+	#contact & {
+		@include offScreenNav;
 	}
 
 	&.open {

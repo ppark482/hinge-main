@@ -24,9 +24,14 @@
 }
 
 // Choose between full nav or offscreen
-// Defaults to offScreen
-@mixin offScreenNav($full: true) {
-	@if $full {
+// Defaults to hidden offScreen
+@mixin offScreenNav($hidden: true) {
+	@if $hidden {
+		width: 80%;
+		@media(min-width: 768px){
+			width: 40%;
+		}
+	} @else {
 		@media(max-width: 767px){
 			width: 80%;
 		}
@@ -37,11 +42,6 @@
 			.close-nav {
 				display: none;
 			}
-		}
-	} @else {
-		width: 80%;
-		@media(min-width: 768px){
-			width: 40%;
 		}
 	}
 }
