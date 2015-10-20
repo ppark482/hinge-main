@@ -59,7 +59,10 @@ gulp.task('templates', function() {
 });
 
 gulp.task('json', function() {
-	return gulp.src(['./slideshow.json'])
+	var slideshow = gulp.src(['./slideshow.json'])
+	.pipe( gulp.dest('./dist'))
+	.pipe(connect.reload());
+	var portfolio = gulp.src(['./portfolio.json'])
 	.pipe( gulp.dest('./dist'))
 	.pipe(connect.reload());
 });
