@@ -45,3 +45,23 @@
 		}
 	}
 }
+
+// Font Style Mixins
+@mixin headline {
+	font-family: $bebas;
+	font-size: 8rem;
+	letter-spacing: .2rem;
+}
+
+@mixin subhead {
+	font-family: $bebas;
+	font-size: 8rem;
+	letter-spacing: .2rem;
+}
+
+@mixin copy {
+	font-family: $work-sans;
+	font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+	line-height: 2.4rem;
+}

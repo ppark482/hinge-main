@@ -21,13 +21,15 @@
 	}
 
 	h2 {
+		@include headline;
 		color: white;
-		margin-top: 28rem;
+		margin-top: 35vh;
 	}
 
 	p {
+		@include copy;
 		color: white;
-		margin-top: 4rem;
+		margin-top: 3rem;
 	}
 }
 

@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'fonts';
 @import 'components/header/header';
 @import 'components/navigation/navigation';
 @import 'components/slider/slider';
@@ -11,6 +12,10 @@
 
 html {
 	background-color: black;
+}
+
+* {
+	@include copy;
 }
 
 ul,
