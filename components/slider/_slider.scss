@@ -4,7 +4,6 @@
 	padding-left: 0;
 	background: grey;
 	height: 100vh;
-	position: relative;
 }
 
 .slides {
@@ -36,6 +35,10 @@
 	@include vertical-center;
 	left: 2rem;
 	color: white;
+
+	@media(max-width: 767px){
+		position: fixed;
+	};
 
 	li {
 		height: 1rem;
