@@ -1,0 +1,18 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+
+	.logo {
+		width: 18rem;
+		float: left;
+	}
+
+	.menu {
+		float: right;
+		color: white;
+		margin: 1rem 1.6rem;
+	}
+}

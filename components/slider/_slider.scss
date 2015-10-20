@@ -44,6 +44,11 @@
 		border: 1px solid white;
 		margin-bottom: 1rem;
 
+		&:hover {
+			height: 1.2rem;
+			width: 1.2rem;
+		}
+
 		&.active {
 			background-color: white;
 		}
