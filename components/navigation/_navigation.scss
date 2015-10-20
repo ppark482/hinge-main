@@ -5,6 +5,7 @@
 	right: -100vw;
 	top: 0;
 	z-index: 99;
+	@include transition(right, ease-out, 200ms);
 
 	@media(max-width: 767px){
 		width: 80%;
@@ -16,6 +17,7 @@
 	}
 
 	&.open {
+		@include transition(right, ease-out, 200ms);
 		right: 0;
 	}
 

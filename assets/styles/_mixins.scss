@@ -14,3 +14,11 @@
 	top: 50%;
 	transform: translateY(-50%);
 }
+
+// CSS transitions with browser prefixes
+@mixin transition($property, $easing, $time) {
+	-webkit-transition: $property $easing $time;
+	-moz-transition: $property $easing $time;
+	-o-transition: $property $easing $time;
+	transition: $property $easing $time;
+}
