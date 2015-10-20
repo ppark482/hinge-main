@@ -22,3 +22,26 @@
 	-o-transition: $property $easing $time;
 	transition: $property $easing $time;
 }
+
+// Choose between full nav or offscreen
+// Defaults to offScreen
+@mixin offScreenNav($full: true) {
+	@if $full {
+		@media(max-width: 767px){
+			width: 80%;
+		}
+		@media(min-width: 768px){
+			position: relative;
+			right: 0;
+
+			.close-nav {
+				display: none;
+			}
+		}
+	} @else {
+		width: 80%;
+		@media(min-width: 768px){
+			width: 40%;
+		}
+	}
+}

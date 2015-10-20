@@ -17,5 +17,18 @@
 		color: white;
 		margin: 1rem 1.6rem;
 	    pointer-events: all;
+
+		// Show hamburger on homepage
+		#homepage & {
+			display: block;
+
+			@media(min-width: 768px){
+				display: none;
+			}
+		}
+
+		#portfolio & {
+			display: block;
+		}
 	}
 }
