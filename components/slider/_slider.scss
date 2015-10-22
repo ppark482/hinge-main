@@ -17,13 +17,23 @@
 		background-position: center;
 		text-align: center;
 		overflow: auto;
-	    padding: 0 8rem;
+	}
+
+	&-content {
+		@include center;
+		width: 100%;
+		padding: 0 8rem;
 	}
 
 	h2 {
 		@include headline;
 		color: white;
-		margin-top: 35vh;
+	}
+
+	h5 {
+		@include subhead;
+		color: white;
+		margin-top: 3rem;
 	}
 
 	p {

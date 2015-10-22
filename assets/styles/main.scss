@@ -16,6 +16,9 @@ html {
 
 * {
 	@include copy;
+	-webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 ul,
