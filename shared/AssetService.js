@@ -9,12 +9,12 @@
 	function AssetService ($http, $q) {
 
 		function getSlides () {
-			return $http.get('./slideshow.json');
+			return $http.get('./json/slideshow.json');
 		}
 
 		function getClient(client) {
 			var deferred = $q.defer();
-			$http.get('./portfolio.json').success( function (data) {
+			$http.get('./json/portfolio.json').success( function (data) {
 				angular.forEach(data, function (x) {
 					if (x.client === client) {
 						deferred.resolve(x);
