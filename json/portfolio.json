@@ -1,32 +1,32 @@
 [
 	{
 		"client": "alexa",
-		"image": ["img/alexa-portfolio-thumb.png", "img/alexa-portfolio.png"],
+		"image": ["../img/portfolio/alexa-portfolio-thumb.png", "../img/portfolio/alexa-portfolio.png"],
 		"description": ""
 	},
 	{
 		"client": "flycast",
-		"image": ["img/flycast-1-thumb.png", "img/flycast-2.png"],
+		"image": ["../img/portfolio/flycast-1-thumb.png", "../img/portfolio/flycast-2.png"],
 		"description": ""
 	},
 	{
 		"client": "fruit-creative",
-		"image": ["img/fruit-creative-1-thumb.png", "img/fruit-creative-1", "img/fruit-creative-2"],
+		"image": ["../img/portfolio/fruit-creative-1-thumb.png", "../img/portfolio/fruit-creative-1", "../img/portfolio/fruit-creative-2"],
 		"description": ""
 	},
 	{
 		"client": "maheq",
-		"image": ["img/maheq-1-thumb.png", "img/maheq-1.png", "img/maheq-2.png"],
+		"image": ["../img/portfolio/maheq-1-thumb.png", "../img/portfolio/maheq-1.png", "../img/portfolio/maheq-2.png"],
 		"description": ""
 	},
 	{
 		"client": "trailer-park",
-		"image": ["img/trailer-park-shootout-1-thumb.png", "img/trailer-park-shootout-2.png"],
+		"image": ["../img/portfolio/trailer-park-shootout-1-thumb.png", "../img/portfolio/trailer-park-shootout-2.png"],
 		"description": ""
 	},
 	{
 		"client": "wandrlst",
-		"image": ["img/wandrlst-1-thumb.png", "img/wandrlst-1.png", "img/wandrlst-2.png", "img/wandrlst-3.png", "img/wandrlst-4.png"],
+		"image": ["../img/portfolio/wandrlst-1-thumb.png", "../img/portfolio/wandrlst-1.png", "../img/portfolio/wandrlst-2.png", "../img/portfolio/wandrlst-3.png", "../img/portfolio/wandrlst-4.png"],
 		"description": ""
 	}
 
