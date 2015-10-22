@@ -7,13 +7,13 @@
 	z-index: 99;
 	@include transition(right, ease-out, 200ms);
 
-	#homepage & {
+	#homepage &,
+	#contact & {
 		@include offScreenNav(false);
 	}
 
 	#portfolio &,
-	#about &,
-	#contact & {
+	#about & {
 		@include offScreenNav;
 	}
 

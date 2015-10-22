@@ -19,7 +19,8 @@
 	    pointer-events: all;
 
 		// Show hamburger on homepage
-		#homepage & {
+		#homepage &,
+		#contact & {
 			display: block;
 
 			@media(min-width: 768px){
@@ -28,8 +29,7 @@
 		}
 
 		#portfolio &,
-		#about &,
-		#contact & {
+		#about & {
 			display: block;
 		}
 	}

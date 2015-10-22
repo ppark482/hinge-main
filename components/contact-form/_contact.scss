@@ -1,0 +1,10 @@
+.contact {
+	padding-top: 10rem;
+
+	h2 {
+		@include headline;
+	}
+
+	&-form {
+	}
+}
