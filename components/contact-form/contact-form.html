@@ -1,14 +1,26 @@
 <h2>Contact Us</h2>
-<form class="contact-form" action="">
+<form
+	class="contact-form"
+	method="POST"
+	ng-submit="submitForm()">
+	<!-- Name -->
 	<label class="col-md-4 col-sm-12" for="name">Name</label>
-	<input class="col-md-8 col-sm-12" type="text" id="name">
+	<input ng-model="senderName" class="col-md-8 col-sm-12" type="text" id="name">
+	<!-- Company -->
 	<label class="col-md-4 col-sm-12" for="company">Company</label>
-	<input class="col-md-8 col-sm-12" type="text" id="company">
+	<input ng-model="company" class="col-md-8 col-sm-12" type="text" id="company">
+	<!-- Email -->
 	<label class="col-md-4 col-sm-12" for="email">Email Address</label>
-	<input class="col-md-8 col-sm-12" type="text" id="email">
+	<input ng-model="email" class="col-md-8 col-sm-12" type="text" id="email" name="_replyto">
+	<!-- Phone -->
 	<label class="col-md-4 col-sm-12" for="phone">Phone Number</label>
-	<input class="col-md-8 col-sm-12" type="text" id="phone">
+	<input ng-model="phone" class="col-md-8 col-sm-12" type="text" id="phone">
+	<!-- Description -->
 	<label class="col-md-4 col-sm-12" for="description">Give us a short description of your project.</label>
-	<textarea class="col-md-8 col-sm-12" id="description"></textarea>
-	<button class="col-md-4 col-sm-12 col-md-offset-4">Submit</button>
+	<textarea ng-model="message" class="col-md-8 col-sm-12" id="description"></textarea>
+	<!-- Gotcha -->
+	<input type="hidden" name="_gotcha">
+	<!-- Submit -->
+	<button class="col-md-4 col-sm-12 col-md-offset-4" type="submit">Submit</button>
 </form>
+
