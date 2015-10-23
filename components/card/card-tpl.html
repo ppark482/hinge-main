@@ -1,3 +1,15 @@
 <section class="card">
-	<img src="{{ works.image[0] }}">
+	<div>
+		<i class="fa col-md-2 
+			ng-class: { 
+				'fa-folder-open-o' 	: works.type === 'portfolio',
+				'fa-cogs'			: works.type === 'app',
+				'fa-compass'		: works.type === 'webpage'
+				} "></i>
+		<h2 class="col-md-10">{{ works.title }}</h2>
+	</div>
+	<div>
+		<p>{{ works.description }}</p>
+		<a href="{{ works.url }}"></a>
+	</div>
 </section>

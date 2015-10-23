@@ -2,32 +2,50 @@
 	{
 		"client": "alexa",
 		"image": ["../img/portfolio/alexa-portfolio-thumb.png", "../img/portfolio/alexa-portfolio.png"],
-		"description": ""
+		"description": "This is Alexa Crisa's Portfolio Site",
+		"title": "Alexa Crisa",
+		"type": "portfolio",
+		"url": ""
 	},
 	{
 		"client": "flycast",
 		"image": ["../img/portfolio/flycast-1-thumb.png", "../img/portfolio/flycast-2.png"],
-		"description": ""
+		"description": "This is Fly Cast web and mobile application.",
+		"title": "Fly Cast",
+		"type": "app",
+		"url": ""
 	},
 	{
 		"client": "fruit-creative",
 		"image": ["../img/portfolio/fruit-creative-1-thumb.png", "../img/portfolio/fruit-creative-1", "../img/portfolio/fruit-creative-2"],
-		"description": ""
+		"description": "This is Fruit Creative Webpage.",
+		"title": "Fruit Creative",
+		"type": "webpage",
+		"url": ""
 	},
 	{
 		"client": "maheq",
 		"image": ["../img/portfolio/maheq-1-thumb.png", "../img/portfolio/maheq-1.png", "../img/portfolio/maheq-2.png"],
-		"description": ""
+		"description": "This is Maheq Khiatani's portfolio.",
+		"title": "Maheq Khiatani",
+		"type": "portfolio",
+		"url": ""
 	},
 	{
 		"client": "trailer-park",
 		"image": ["../img/portfolio/trailer-park-shootout-1-thumb.png", "../img/portfolio/trailer-park-shootout-2.png"],
-		"description": ""
+		"description": "This is a Trailer Park Shootout game.",
+		"title": "Trailer Park Shootout",
+		"type": "app",
+		"url": ""
 	},
 	{
 		"client": "wandrlst",
 		"image": ["../img/portfolio/wandrlst-1-thumb.png", "../img/portfolio/wandrlst-1.png", "../img/portfolio/wandrlst-2.png", "../img/portfolio/wandrlst-3.png", "../img/portfolio/wandrlst-4.png"],
-		"description": ""
+		"description": "This is Wandrlst, we're not sure what it's for.",
+		"title": "Wandrlst",
+		"type": "app",
+		"url": ""
 	}
 
 ]
