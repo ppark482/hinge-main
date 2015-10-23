@@ -2,7 +2,8 @@
 <form
 	class="contact-form"
 	method="POST"
-	ng-submit="submitForm()">
+	ng-submit="submitForm()"
+	ng-hide="showSuccess || showFail">
 	<!-- Name -->
 	<label class="col-md-4 col-sm-12" for="name">Name</label>
 	<input ng-model="senderName" class="col-md-8 col-sm-12" type="text" id="name">
@@ -24,3 +25,16 @@
 	<button class="col-md-4 col-sm-12 col-md-offset-4" type="submit">Submit</button>
 </form>
 
+<!-- Success Message -->
+<section ng-show="showSuccess" class="message message-success">
+	Good Job, you did it.
+	<button ng-click="hideMessages()">cool</button>
+	<button ui-sref="home">go home</button>
+</section>
+
+<!-- Failure Message -->
+<section ng-show="showFail" class="message message-fail">
+	Message did not send.
+	<button ng-click="hideMessages()">cool</button>
+	<button ui-sref="home">go home</button>
+</section>

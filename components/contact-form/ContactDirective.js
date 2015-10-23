@@ -30,11 +30,11 @@
 
 			var showSuccessMessage = function(data){
 				console.log(data);
-				alert('success');
+				scope.showSuccess = true;
 			};
 
 			var showFailureMessage = function(){
-				alert('failure');
+				scope.showFail = true;
 			};
 
 			scope.submitForm = function(){
@@ -45,6 +45,14 @@
 				    dataType: "json"
 				}).then( showSuccessMessage, showFailureMessage );
 			};
+
+			scope.hideMessages = function(){
+				scope.showSuccess = false;
+				scope.showFail = false;
+			};
+
+			scope.showSuccess = false;
+			scope.showFail = false;
 		}
 	}
 
