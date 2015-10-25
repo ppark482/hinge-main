@@ -1,10 +1,66 @@
 .contact {
-	padding-top: 10rem;
+	display: block;
+	padding: 0;
+	position: relative;
+	height: 100vh;
+
+	&-form {
+		@include center;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.check-boxes {
+		margin-bottom: 2rem;
+
+		label {
+			width: auto;
+			display: inline-block;
+			margin-right: 1rem;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 3rem;
+		}
+
+	}
+
+	.message {
+		@include center;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
 
 	h2 {
 		@include headline;
+		margin-bottom: 1rem;
 	}
 
-	&-form {
+	p {
+		margin-bottom: 5rem;
+	}
+
+	label {
+		display: block;
+		width: 100%;
+	}
+
+	input[type="text"], textarea {
+		height: 5rem;
+		display: block;
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	textarea {
+		min-height: 8rem;
+	}
+
+	button {
+		@include red-button;
 	}
 }

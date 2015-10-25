@@ -4,60 +4,63 @@
 	ng-hide="showSuccess || showFail">
 
 	<!-- Name / Company -->
-	<section ng-show="checkIsActive(1)">
+	<section class="contact-section" ng-show="checkIsActive(1)">
 		<h2>Hello.</h2>
 		<p>Let's get some of the basics out of the way.</p>
-		<label class="col-md-4 col-sm-12" for="name">Name</label>
-		<input ng-model="senderName" class="col-md-8 col-sm-12" type="text" id="name">
-		<label class="col-md-4 col-sm-12" for="company">Company</label>
-		<input ng-model="company" class="col-md-8 col-sm-12" type="text" id="company">
+		<label for="name">Name</label>
+		<input ng-model="senderName" type="text" id="name">
+		<label  for="company">Company</label>
+		<input ng-model="company" type="text" id="company">
 		<button ng-show="senderName && company" ng-click="showNext()">Next</button>
 	</section>
 
 	<!-- Project Description -->
-	<section ng-show="checkIsActive(2)">
+	<section class="contact-section" ng-show="checkIsActive(2)">
 		<h2>Let's do it.</h2>
 		<p>What did you have in mind?</p>
-		<label for="website-check">Website</label>
-		<input ng-model="website" type="checkbox" id="website-check">
-		<label for="webapp-check">Web Application</label>
-		<input ng-model="webapp" type="checkbox" id="webapp-check">
-		<label for="other-check">Other</label>
-		<input ng-model="other" type="checkbox" id="other-check">
-		<label class="col-md-4 col-sm-12" for="description">Give us a short description of your project.</label>
-		<textarea ng-model="message" class="col-md-8 col-sm-12" id="description"></textarea>
-		<button ng-show="message" ng-click="showNext()">Next</button>
+		<div class="check-boxes">
+			<label for="website-check">Website</label>
+			<input ng-model="website" type="checkbox" id="website-check">
+			<label for="webapp-check">Web Application</label>
+			<input ng-model="webapp" type="checkbox" id="webapp-check">
+			<label for="other-check">Other</label>
+			<input ng-model="other" type="checkbox" id="other-check">
+		</div>
+		<label for="description">Give us a short description of your project.</label>
+		<textarea ng-model="message" id="description"></textarea>
 		<button ng-click="showPrevious()">Previous</button>
+		<button ng-show="message" ng-click="showNext()">Next</button>
 	</section>
 
 	<!-- Contact Info -->
-	<section ng-show="checkIsActive(3)">
+	<section class="contact-section" ng-show="checkIsActive(3)">
 		<h2>Let's talk.</h2>
 		<p>Give us your info and we'll get back to you shortly!</p>
-		<label class="col-md-4 col-sm-12" for="email">Email Address</label>
-		<input ng-model="email" class="col-md-8 col-sm-12" type="text" id="email" name="_replyto">
-		<label class="col-md-4 col-sm-12" for="phone">Phone Number</label>
-		<input ng-model="phone" class="col-md-8 col-sm-12" type="text" id="phone">
-		<button ng-show="email && phone" ng-click="showNext()">Next</button>
+		<label for="email">Email Address</label>
+		<input ng-model="email" type="text" id="email" name="_replyto">
+		<label for="phone">Phone Number</label>
+		<input ng-model="phone" type="text" id="phone">
+		<button ng-click="showPrevious()">Previous</button>
+		<!-- Submit -->
+		<button ng-show="email && phone" type="submit" ng-click="submitForm()">Submit</button>
 	</section>
 
 	<!-- Gotcha - (Keep hidden) -->
 	<input type="hidden" name="_gotcha">
-
-	<!-- Submit -->
-	<button ng-show="checkIsActive(4)" class="col-md-4 col-sm-12 col-md-offset-4" type="submit" ng-click="submitForm()">Submit</button>
 </form>
 
 <!-- Success Message -->
 <section ng-show="showSuccess" class="message message-success">
-	Good Job, you did it.
-	<button ng-click="hideMessages()">cool</button>
-	<button ui-sref="home">go home</button>
+	<h2>Thanks!</h2>
+	<p>We'll be in touch.</p>
+	<button ng-click="startOver()">Start Over</button>
+	<button ui-sref="home">Head home</button>
 </section>
 
 <!-- Failure Message -->
 <section ng-show="showFail" class="message message-fail">
-	Message did not send.
-	<button ng-click="hideMessages()">cool</button>
-	<button ui-sref="home">go home</button>
+	<h2>Whoops...</h2>
+	<p>Something went wrong. Try again, or contact us directly at <a href="mailto:hi@hingeinc.co">hi@hingeinc.co</a>.</p>
+	<button ng-click="startOver()">Start Over</button>
+	<button ui-sref="home">Head Home</button>
 </section>

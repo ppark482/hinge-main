@@ -5,7 +5,8 @@
 	    .module('app', [
 	    	'ui.router',
 	    	'ui.bootstrap',
-			'angular-carousel'
+			'angular-carousel',
+			'ngAnimate'
 	    	]);
 
 }());

@@ -24,10 +24,6 @@
 			scope.showSuccess = false;
 			scope.showFail = false;
 
-			attrs.$observe('senderName', function() {
-				console.log($scope.senderName);
-			});
-
 			scope.checkIsActive = function(num){
 				return scope.isActive === num;
 			};
@@ -67,9 +63,10 @@
 				}).then( showSuccessMessage, showFailureMessage );
 			};
 
-			scope.hideMessages = function(){
+			scope.startOver = function(){
 				scope.showSuccess = false;
 				scope.showFail = false;
+				scope.isActive = 1;
 			};
 		}
 	}

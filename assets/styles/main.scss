@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'mixins';
 @import 'fonts';
+@import 'colors';
 @import 'components/header/header';
 @import 'components/navigation/navigation';
 @import 'components/slider/slider';
@@ -27,6 +28,14 @@ li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	background-color: none;
 }
 
 img {

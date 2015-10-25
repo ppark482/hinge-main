@@ -75,3 +75,20 @@
     letter-spacing: 0.1rem;
 	line-height: 2.4rem;
 }
+
+// Button Styles
+@mixin red-button {
+	@include transition(background-color, ease-out, 200ms);
+	height: 5rem;
+	background-color: $light-red;
+	color: white;
+	padding: 0 4rem;
+	margin: 2rem 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .3rem;
+
+	&:hover {
+		background-color: $dark-red;
+	}
+}

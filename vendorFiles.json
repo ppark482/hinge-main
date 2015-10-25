@@ -9,6 +9,7 @@
 		"node_modules/angular-ui-router/build/angular-ui-router.min.js",
 		"node_modules/angular-touch/angular-touch.min.js",
 		"node_modules/angular-carousel/dist/angular-carousel.min.js",
-		"node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"
+		"node_modules/angular-ui-bootstrap/ui-bootstrap.min.js",
+		"node_modules/angular-animate/angular-animate.min.js"
 	]
 }
