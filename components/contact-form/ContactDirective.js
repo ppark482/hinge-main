@@ -20,16 +20,27 @@
 
 		function link (scope, element, attrs) {
 
-			var message = {
-				name: scope.senderName,
-				company: scope.company,
-				email: scope.email,
-				phone: scope.phone,
-				message: scope.message
+			scope.isActive = 1;
+			scope.showSuccess = false;
+			scope.showFail = false;
+
+			attrs.$observe('senderName', function() {
+				console.log($scope.senderName);
+			});
+
+			scope.checkIsActive = function(num){
+				return scope.isActive === num;
+			};
+
+			scope.showNext = function(){
+				scope.isActive++;
+			};
+
+			scope.showPrevious = function(){
+				scope.isActive--;
 			};
 
 			var showSuccessMessage = function(data){
-				console.log(data);
 				scope.showSuccess = true;
 			};
 
@@ -38,6 +49,16 @@
 			};
 
 			scope.submitForm = function(){
+				var message = {
+					name: scope.senderName,
+					company: scope.company,
+					email: scope.email,
+					phone: scope.phone,
+					website: scope.website,
+					webapp: scope.webapp,
+					other: scope.other,
+					message: scope.message
+				};
 				$http({
 				    url: "//formspree.io/you@email.com",
 				    method: "POST",
@@ -50,9 +71,6 @@
 				scope.showSuccess = false;
 				scope.showFail = false;
 			};
-
-			scope.showSuccess = false;
-			scope.showFail = false;
 		}
 	}
 
