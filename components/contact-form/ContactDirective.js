@@ -30,10 +30,12 @@
 
 			scope.showNext = function(){
 				scope.isActive++;
+				element[0].scrollTop = 0;
 			};
 
 			scope.showPrevious = function(){
 				scope.isActive--;
+				element[0].scrollTop = 0;
 			};
 
 			var showSuccessMessage = function(data){
