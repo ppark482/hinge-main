@@ -4,6 +4,7 @@
 	cursor: pointer;
 	transition: background .5s;
 	color: $dark-red;
+	background-size: 0, 0;
 	&:not(:last-child) {
 		margin-bottom: 15px;
 	}
