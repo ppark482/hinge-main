@@ -5,7 +5,9 @@
 	width: 100%;
 	z-index: 99;
 	pointer-events: none;
-
+	&:hover	{
+		cursor: pointer;
+	}
 	.logo {
 		width: 18rem;
 		float: left;

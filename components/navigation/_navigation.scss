@@ -28,6 +28,9 @@
 		left: 1rem;
 		z-index: 100;
 		color: white;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	li {

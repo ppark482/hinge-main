@@ -2,25 +2,24 @@
 	height: 50vh;
 	display: block;
 	cursor: pointer;
-	transition: background-color .5s;
-
+	transition: background .5s;
+	color: $dark-red;
 	&:not(:last-child) {
 		margin-bottom: 15px;
 	}
 	&:hover {
-		background-color: $dark-red;
-		color: white;
+		// background-color: $dark-red;
+		background: url('../../img/portfolio/alexa-portfolio-thumb.png') no-repeat;
+		background-size: cover;
+		color: black;
 		div:nth-of-type(2) {
-			border-bottom: 5px solid white;
+			border-bottom: 5px solid black;
 		}
 	}
 	div:first-child {
 		padding-top: 20%;
 		i {
 			font-size: 40px;
-		}
-		h2 {
-
 		}
 	}
 	div:nth-of-type(2) {
