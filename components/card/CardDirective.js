@@ -20,10 +20,27 @@
 
 		return directive;
 
-		function link (scope, element, attrs) {
+		function link (scope, el, attrs) {
 			AssetService.getClient(scope.client).then( function(client) {
 				scope.works = client;
+				setBackgroundImage(scope.works);
+				scope.showBackground = showBackground;
+				scope.hideBackground = hideBackground;
 			});
+
+			function setBackgroundImage (work) {
+				var url = work.image[0];
+				el.css('background', 'url(\'' + url + '\')');
+				el.css('background-size', '0, 0');
+			}
+
+			function showBackground () {
+				el.css('background-size', 'cover');
+			}
+
+			function hideBackground () {
+				el.css('background-size', '0, 0');
+			}
 		}
 	}
 
