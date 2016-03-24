@@ -5,7 +5,7 @@
 		"description": "This is Alexa Crisa's Portfolio Site",
 		"title": "Alexa Crisa",
 		"type": "portfolio",
-		"url": ""
+		"url": "alexa"
 	},
 	{
 		"client": "flycast",
@@ -13,7 +13,7 @@
 		"description": "This is Fly Cast web and mobile application.",
 		"title": "Fly Cast",
 		"type": "app",
-		"url": ""
+		"url": "flycast"
 	},
 	{
 		"client": "fruit-creative",
@@ -21,7 +21,7 @@
 		"description": "This is Fruit Creative Webpage.",
 		"title": "Fruit Creative",
 		"type": "webpage",
-		"url": ""
+		"url": "fruit-creative"
 	},
 	{
 		"client": "maheq",
@@ -29,7 +29,7 @@
 		"description": "This is Maheq Khiatani's portfolio.",
 		"title": "Maheq Khiatani",
 		"type": "portfolio",
-		"url": ""
+		"url": "maheq"
 	},
 	{
 		"client": "trailer-park",
@@ -37,7 +37,7 @@
 		"description": "This is a Trailer Park Shootout game.",
 		"title": "Trailer Park Shootout",
 		"type": "app",
-		"url": ""
+		"url": "trailer-park"
 	},
 	{
 		"client": "wandrlst",
@@ -45,7 +45,7 @@
 		"description": "This is Wandrlst, we're not sure what it's for.",
 		"title": "Wandrlst",
 		"type": "app",
-		"url": ""
+		"url": "wandrlst"
 	}
 
 ]

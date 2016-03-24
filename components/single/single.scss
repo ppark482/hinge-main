@@ -1,0 +1,30 @@
+.single {
+	height: 50vh;
+	display: block;
+	cursor: pointer;
+	transition: background .5s;
+	color: $dark-red;
+	background-size: 0, 0;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	&:hover {
+		// background-color: $dark-red;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: black;
+		div:nth-of-type(2) {
+			border-bottom: 5px solid black;
+		}
+	}
+	div:first-child {
+		padding-top: 20%;
+		i {
+			font-size: 40px;
+		}
+	}
+	div:nth-of-type(2) {
+		border-bottom: 5px solid $dark-red;
+		transition: border .5s;
+	}
+}

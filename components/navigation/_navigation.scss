@@ -8,7 +8,8 @@
 	@include transition(right);
 
 	#homepage &,
-	#contact & {
+	#contact &,
+	#single & {
 		@include offScreenNav(false);
 	}
 

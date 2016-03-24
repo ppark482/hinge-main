@@ -23,6 +23,10 @@
 				.state('works', {
 					url: '/works',
 					templateUrl: 'templates/main/works.html'
+				})
+				.state('single', {
+					url: '/works/:project',
+					templateUrl: 'templates/main/single.html'
 				});
 		}
 	]);

@@ -1,7 +1,7 @@
 <section class="card" ng-mouseenter="showBackground()" ng-mouseleave="hideBackground()">
 	<div>
-		<i class="fa col-md-2 
-			ng-class: { 
+		<i class="fa col-md-2
+			ng-class: {
 				'fa-folder-open-o' 	: works.type === 'portfolio',
 				'fa-cogs'			: works.type === 'app',
 				'fa-compass'		: works.type === 'webpage'
@@ -10,6 +10,6 @@
 	</div>
 	<div>
 		<p>{{ works.description }}</p>
-		<a href="{{ works.url }}"></a>
+		<a ui-sref="single({ project: works.url })">See More</a>
 	</div>
 </section>
