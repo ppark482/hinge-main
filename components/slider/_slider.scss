@@ -39,7 +39,16 @@
 	p {
 		@include copy;
 		color: $white;
-		margin-top: 3rem;
+	    margin: 3rem 0 2rem;
+	}
+
+	a {
+		@include textlink;
+		color: $light-grey;
+
+		&:hover {
+			color: $white;
+		}
 	}
 }
 

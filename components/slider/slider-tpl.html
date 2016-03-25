@@ -6,8 +6,9 @@
 		<div back-img="{{slide.image}}" class="slides-bg">
 			<div class="slides-content">
 				<h2> {{ slide.title }} </h2>
-				<h5> {{ slide.subtext }} </h5>
-				<p> {{ slide.text }} </p>
+				<h5 ng-if="slide.subtext"> {{ slide.subtext }} </h5>
+				<p ng-if="slide.text"> {{ slide.text }} </p>
+				<a href="{{ slide.linkURL }}"> {{ slide.linkText }}</a>
 			</div>
 		</div>
 	</li>
