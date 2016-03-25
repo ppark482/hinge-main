@@ -29,7 +29,7 @@
 			});
 
 			function setBackgroundImage (work) {
-				var url = work.image[0];
+				var url = work.thumb;
 				el.css('background', 'url(\'' + url + '\')');
 				el.css('background-size', '0, 0');
 			}

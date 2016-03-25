@@ -80,12 +80,24 @@
 	line-height: 2.4rem;
 }
 
+@mixin textlink {
+	font-family: $cooper;
+	font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 // Button Styles
 @mixin red-button {
 	@include transition(background-color);
 	height: 5rem;
 	background-color: $light-red;
-	color: white;
+	color: $white;
 	padding: 0 4rem;
 	text-transform: uppercase;
 	font-weight: bold;
