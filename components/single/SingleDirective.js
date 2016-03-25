@@ -21,7 +21,6 @@
 		function link (scope, el, attrs) {
 			AssetService.getClient($stateParams.project).then( function(project) {
 				scope.project = project;
-				console.log(project);
 			});
 		}
 	}

@@ -1,6 +1,11 @@
 .single {
-	margin-top: 10rem;
+	padding-top: 10rem;
     display: block;
+
+	@media(min-width: 768px){
+		height: 100vh;
+		overflow: scroll;
+	}
 
 	h2 {
 		@include headline;
