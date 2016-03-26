@@ -60,9 +60,10 @@
 	@include vertical-center;
 	left: 2rem;
 	color: $white;
+	position: fixed;
 
-	@media(max-width: 767px){
-		position: fixed;
+	@media(min-width: $tablet){
+		position: absolute;
 	};
 
 	li {

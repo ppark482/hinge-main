@@ -28,14 +28,14 @@
 @mixin offScreenNav($hidden: true) {
 	@if $hidden {
 		width: 80%;
-		@media(min-width: 768px){
+		@media(min-width: $tablet){
 			width: 40%;
 		}
 	} @else {
 		@media(max-width: 767px){
 			width: 80%;
 		}
-		@media(min-width: 768px){
+		@media(min-width: $tablet){
 			position: relative;
 			right: 0;
 
@@ -53,7 +53,7 @@
 	font-size: 5rem;
 	text-transform: uppercase;
 
-	@media(min-width: 500px){
+	@media(min-width: $mobile){
 		font-size: 8rem;
 	}
 }

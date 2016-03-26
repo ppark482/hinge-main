@@ -2,7 +2,7 @@
 	padding-top: 10rem;
     display: block;
 
-	@media(min-width: 768px){
+	@media(min-width: $tablet){
 		height: 100vh;
 		overflow: scroll;
 	}
