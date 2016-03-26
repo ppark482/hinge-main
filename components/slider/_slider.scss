@@ -20,9 +20,13 @@
 	}
 
 	&-content {
-		@include center;
 		width: 100%;
-		padding: 0 8rem;
+		overflow: scroll;
+		padding: 10rem 8rem;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		min-height:100vh;
 	}
 
 	h2 {
